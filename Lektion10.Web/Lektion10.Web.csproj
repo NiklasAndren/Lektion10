@@ -161,6 +161,12 @@
   <ItemGroup>
     <Content Include="Views\Product\Delete.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lektion10.Model\Lektion10.Model.csproj">
+      <Project>{0C0C031E-01DE-4099-94F1-61DA30E41916}</Project>
+      <Name>Lektion10.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
