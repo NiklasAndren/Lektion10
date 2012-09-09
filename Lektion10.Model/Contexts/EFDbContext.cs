@@ -23,9 +23,9 @@ namespace Lektion10.Model.Context
     {
         protected override void Seed(EFDbContext context)
         {
-            var catWatersport = "Watersport"; // new Category { CategoryID = 1, Name = "Watersport" };
-            var catSoccer = "Soccer"; // new Category { CategoryID = 2, Name = "Soccer" };
-            var catChess = "Chess"; // new Category { CategoryID = 3, Name = "Chess" };
+            var catWatersport = new Category { CategoryID = 1, Name = "Watersport" };
+            var catSoccer = new Category { CategoryID = 2, Name = "Soccer" };
+            var catChess = new Category { CategoryID = 3, Name = "Chess" };
 
             var products = new List<Product>
             {

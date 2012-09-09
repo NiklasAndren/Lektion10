@@ -12,9 +12,9 @@ namespace Lektion10.Model.Repositories
         private List<Product> products;
         public FakeProductRepository()
         {
-            var catOutdoor = "Outdoor sports"; // new Category { CategoryID = 1, Name = "Outdoor sports" };
-            var catSkiing = "Ski sports"; // new Category { CategoryID = 2, Name = "Ski sports" };
-            var catHiking = "Hiking"; // new Category { CategoryID = 3, Name = "Hiking" };
+            var catOutdoor = new Category { CategoryID = 1, Name = "Outdoor sports" };
+            var catSkiing = new Category { CategoryID = 2, Name = "Ski sports" };
+            var catHiking = new Category { CategoryID = 3, Name = "Hiking" };
 
             products = new List<Product>() {
                 new Product { ProductID = 1, Name = "Football", Price = 25, Category = catOutdoor },
