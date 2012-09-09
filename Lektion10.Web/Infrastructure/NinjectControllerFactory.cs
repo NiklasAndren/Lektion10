@@ -8,6 +8,7 @@ using Lektion10.Model.Abstract;
 using Lektion10.Model.Entities;
 using Lektion10.Model.Repositories;
 using System.Configuration;
+using Moq;
 
 namespace Lektion10.Web.Infrastructure
 {
@@ -28,9 +29,8 @@ namespace Lektion10.Web.Infrastructure
 
         private void AddBindings()
         {
-            ninjectKernel.Bind<IProductRepository>().ToConstant(new FakeProductRepository());
+            //ninjectKernel.Bind<IProductRepository>().ToConstant(new FakeProductRepository());
 
-            /*
             Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new List<Product> {
                 new Product { ProductID = 1, Name = "Football", Price = 25 },
@@ -43,6 +43,7 @@ namespace Lektion10.Web.Infrastructure
                 new Product { ProductID = 8, Name = "Tent", Price = 179 },
                 new Product { ProductID = 9, Name = "Hiking Boots", Price = 95 },
             }.AsQueryable());
+            mock.Setup(m => m.Get(It.IsAny<int>())).Returns(new Product { ProductID = 1, Name = "Football", Price = 25 });
             ninjectKernel.Bind<IProductRepository>().ToConstant(mock.Object);
              /**/
 
