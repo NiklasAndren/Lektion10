@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Lektion10.Web.Infrastructure;
+using System.Data.Entity;
+using Lektion10.Model.Context;
 
 namespace Lektion10.Web
 {
@@ -38,6 +40,8 @@ namespace Lektion10.Web
             RegisterRoutes(RouteTable.Routes);
 
             ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
+
+            Database.SetInitializer(new Lektion10Initializer());
         }
     }
 }
