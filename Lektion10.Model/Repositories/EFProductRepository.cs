@@ -33,7 +33,7 @@ namespace Lektion10.Model.Repositories
 
         public Product Get(int id)
         {
-            return context.Products.FirstOrDefault(p => p.ProductID == id);
+            return context.Products.Include("Category").FirstOrDefault(p => p.ProductID == id);
         }
     }
 }
