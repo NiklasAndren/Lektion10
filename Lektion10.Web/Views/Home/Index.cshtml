@@ -1,0 +1,28 @@
+﻿@model List<string>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{
+    foreach (var item in (new Lektion10.Model.Repositories.FakeProductRepository())
+                                .Products
+                                .Where(p => p.Name.Contains("Boots"))
+                                .OrderBy(p => p.Category.ToString())
+                                .Select(p => p.Category.ToString())
+                                .Distinct()
+                                .ToList()) {
+        <p>@item</p>
+                                }
+}
+
+@*
+@{
+    var myGuid = new Guid();
+    if (myGuid == null) { 
+        <p>Heppåre!</p>
+    }
+}
+*@
