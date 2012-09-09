@@ -20,5 +20,6 @@ namespace Lektion10.Model.Entities
         public decimal Price { get; set; }
         [Required(ErrorMessage="Please specify a category.")]
         public string Category { get; set; }
+        public string SKU { get; set; }
     }
 }
