@@ -18,7 +18,6 @@ namespace Lektion10.Model.Entities
         public string Description { get; set; }
         [Range(0.01, double.MaxValue, ErrorMessage="Please enter a positive value")]
         public decimal Price { get; set; }
-        [Required(ErrorMessage="Please specify a category.")]
         public int CategoryID { get; set; }
         public Category Category { get; set; }
         public string SKU { get; set; }
