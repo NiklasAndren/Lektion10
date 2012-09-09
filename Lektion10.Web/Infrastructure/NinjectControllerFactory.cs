@@ -31,6 +31,7 @@ namespace Lektion10.Web.Infrastructure
         {
             //ninjectKernel.Bind<IProductRepository>().ToConstant(new FakeProductRepository());
 
+            /*
             Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new List<Product> {
                 new Product { ProductID = 1, Name = "Football", Price = 25 },
@@ -47,7 +48,7 @@ namespace Lektion10.Web.Infrastructure
             ninjectKernel.Bind<IProductRepository>().ToConstant(mock.Object);
              /**/
 
-            //ninjectKernel.Bind<IProductRepository>().To<EFProductRepository>();
+            ninjectKernel.Bind<IProductRepository>().To<EFProductRepository>();
         }
     }
 }
